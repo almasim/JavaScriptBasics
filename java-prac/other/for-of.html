@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const numbers=[3,12,412,551,2333];
+        for(let key in numbers){
+            if(numbers.hasOwnProperty(key)){
+                console.log(key)
+            }
+        }
+
+        for(let value of numbers){   //value
+            console.log(value)
+        }
+
+        for(let value of Object.keys(numbers)){ //index
+            console.log(value)
+        }
+    </script>
+</body>
+</html>

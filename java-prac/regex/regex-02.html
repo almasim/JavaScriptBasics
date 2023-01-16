@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        //+ 1 vagy több
+        //* 0 vagy több
+        //? 0 vagy 1
+        const pattern=/^.a/;
+        const pattern2=/.a+/;
+        const pattern3=/.a*/;
+        const pattern4=/ba?/;
+        const pattern5=/ba{2,5}[^a]/; //'a'min 2x  max 5x after the b after the max there is no a
+        // /^.a/ something before the 'a' it only searches the second character if its only an a it will give null
+        // /.a+/ something before the 'a' and an 'a' after one or more
+        // /.a*/ something before the 'a' and an 'a' after 0 or more
+        const text ="abraka";
+        console.log(text.match(pattern4));
+    </script>
+</body>
+</html>

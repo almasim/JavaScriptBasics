@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+
+        const signedIntEightArray=new Int8Array(3);
+        signedIntEightArray[0]=12;
+        signedIntEightArray[1]=126;
+        console.log(signedIntEightArray)
+
+
+        const signedClampedIntEightArray=new Uint8ClampedArray(3);
+        signedClampedIntEightArray[0]=-120; //it will give 0
+        signedClampedIntEightArray[1]=400; // it will gave 255
+        console.log(signedClampedIntEightArray)
+    </script>
+</body>
+</html>

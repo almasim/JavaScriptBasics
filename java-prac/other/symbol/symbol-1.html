@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const mySymbol=Symbol(); //dont need new
+        console.log(typeof mySymbol);
+        const mySymbol2=Symbol('mySymbol');
+        const mySymbol3=Symbol('mySymbol');
+        console.log(mySymbol2==mySymbol3); // 2 symbol will never be the same
+        console.log(mySymbol2.toString());
+    </script>
+</body>
+</html>

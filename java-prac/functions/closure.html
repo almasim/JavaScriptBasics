@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            'use strict'
+
+            function makeCounter(){
+                let counter=0;
+                return function increseCounter(){
+                    counter++;
+                    console.log(counter)
+                }
+            }
+
+            const increseCounter= makeCounter(); //függvény futása után is hozzáfér a függvényben deklarált változóhoz
+            increseCounter()
+            increseCounter()
+            increseCounter()
+            console.log( '-----------------------')
+            makeCounter()();
+        </script>
+</body>
+</html>

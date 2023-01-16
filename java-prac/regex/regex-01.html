@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        ///i,g,m
+        const pattern=/^ab/g;/// if its /AB/it will give null u have to put i after to make it non case sensitive: /AB/i
+        const pattern2=/ab$/ 
+        const pattern3=/[ab]/g //if it contains [ ]
+        const pattern4=/^[ab]/ //if it contains [ ]
+        const pattern5=/[ab]$/ //if it contains [ ]
+        const pattern6=/^(ab|bc)/ //start with ab or ac
+        const pattern7=/^(ab|bc)$/ //start with ab or ac and end with ab or ac
+        // /ab/m multiline
+        // /ab/g global
+        // /^ab/ ^ ctrl 3 if u want the check only the start of the string
+        // /ab/$ find the pattern from the end
+        const text='abraka dabra';
+        // console.log(pattern.exec(text));
+        console.log(text.match(pattern6));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const person=[{
+            firstName:'Jhon',
+            lastName:'doe',
+            age:30
+        },{
+            firstName:'Jane',
+            lastName:'Doe',
+            age:30
+        }]
+
+        const template=`
+            <div>
+                ${person.map(item=>`<p> ${item.firstName} ${item.lastName} </p>`).join('')}
+            </div>
+        `
+        console.log(template)
+        document.body.innerHTML=template
+    </script>
+</body>
+</html>

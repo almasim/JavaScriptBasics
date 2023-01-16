@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+        'use strict';
+ ////   Old way of setting default value
+        // function getGrossPrice(netPrice,vatPercent,discountPercent){
+        //     var netPrice =netPrice || 1000 ;
+        //     var vatPercent =vatPercent || 27 ;
+        //     var discountPercent = discountPercent || 5 ;
+            
+        //     return netPrice * ((100-discountPercent)/100)*(1+vatPercent/100);
+        // }
+
+        //Normal way to set default values
+        function getGrossPrice(netPrice=1000,vatPercent=27,discountPercent =5){
+            
+            return netPrice * ((100-discountPercent)/100)*(1+vatPercent/100);
+        }
+        console.log(getGrossPrice(10000)); 
+    </SCript>
+</body>
+</html>

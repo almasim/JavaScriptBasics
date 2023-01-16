@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    'use strict';
+    
+    function* generatorFunction(){
+        yield 1; //pauses the run 
+        //return 'end'; // stops the run
+        yield 2;
+        yield 3;
+    }
+     const genetatorObject=generatorFunction();
+    console.log(genetatorObject.next());
+    console.log(genetatorObject.return('end'));
+    console.log(genetatorObject.next());
+
+
+    </script>
+</body>
+</html>

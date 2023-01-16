@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  <script>
+    'use strict';
+
+    const add=(a,b)=> a+b;
+
+    const arrowFunction1= firstName =>{}; //implicit return
+    
+    
+    const arrowFunction2= (firstName) =>{return 'Hello '+firstName+' !'}; //explicit return
+    
+    const arrowFunction3= (firstName) =>({name:firstName}); //object return
+    
+    const arrowFunction3andhalf= (firstName) =>{return {name:firstName}}; //object return
+
+    const numericArray=  [1235,68,1453,420];
+
+    numericArray.sort((a,b)=>a-b);
+
+    const user={ 
+        firstName:'john',
+        lastName:'doe',
+        Fullname(){
+            setTimeout(()=>{
+                console.log(this.firstName,this.lastName);
+            },3000)
+    } }
+    user.Fullname()
+    console.log(numericArray);
+</script>
+    
+</body>
+</html>

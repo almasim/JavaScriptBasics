@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let key1={
+            firstName:'Jhon',
+            lastName:'doe',
+        }
+        let key2={
+            firstName:'Jane',
+            lastName:'doe',
+        }
+
+        const sampleMap=new Map();
+        const sampleWeakMap=new WeakMap();
+
+        sampleMap.set(key1,'dead');
+        sampleWeakMap.set(key2,'dead')
+
+        console.log(sampleMap.get(key1));
+        console.log(sampleWeakMap.get(key2));
+
+        key1=null;
+        sampleMap.forEach((value,key)=>{console.log(key);});
+
+        key2 =null;
+        console.log(sampleWeakMap.get(key2));
+    </script>
+</body>
+</html>

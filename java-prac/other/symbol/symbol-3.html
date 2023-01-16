@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const id=Symbol('id');
+        const person={
+            [id]:1,//symbol for object property hidden property
+            firstName:'John',
+            lastName:'Doe'
+        }
+        for(const key in person){
+            if(person.hasOwnProperty(key)){
+                console.log(key)
+            }
+        }
+
+        console.log(Object.getOwnPropertySymbols(person).map(symbol=>person[symbol])) //writing hidden property
+    </script>
+</body>
+</html>

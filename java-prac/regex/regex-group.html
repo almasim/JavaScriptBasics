@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        // [a-zA-Z0-9_] \w  one or more english aplhabetical letter big or small numbers  and _
+        // [^a-zA-Z0-9_] \W !one or more english aplhabetical letter big or small numbers  and _
+        // [0-9] \d  only numbers
+        // ^[0-9] \D  !only numbers
+
+        const pattern=/^\w+$/; //one or more english aplhabetical letter and nothing else
+        //const pattern=/^[a-záéíőúóüöA-Z0-9_]+$/; //one or more english aplhabetical letter and nothing else
+        const text ='Abrakadabra'
+        console.log(text.match(pattern));
+    </script>
+</body>
+</html>

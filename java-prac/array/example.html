@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="price-list">
+        <li>
+            Monitor
+        </li>
+        <li data-company="AMD">
+            RADEON Rx 5700
+        </li>
+        <li data-price="151.012,12">
+            2060
+        </li>
+        <li data-price="123.202,55">
+           Lg  monitor
+        </li>
+        <li data-price="201.042,02">
+            1660
+        </li>
+        <li data-price="400.212,15">
+            acer pred monitor
+        </li>
+        <li data-price="551.520,02">
+           Another lg monitor
+        </li>
+    </ul>
+    <script>
+        'use strict';
+
+      const sumOfMonitorsPrice= Array
+      .from(document.querySelectorAll('#price-list li[data-price]')) //megkeresi a price-list attribútummal rendelkező elemeket
+      .filter(item=>item.textContent.includes('monitor')) //megkeresi melyiknek az innerHtml-jében van monitor
+      .map(item=>parseFloat(item.dataset.price.replace('.','').replace(',','.')))  //az attributomok értékében kicseréli a pontokat semmire és a vesszőt pontra 
+      .reduce((prevoius,current)=>prevoius+current); //sum
+        console.log(sumOfMonitorsPrice)
+    </script>
+</body>
+</html>

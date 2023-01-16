@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const languages =new Set();
+        languages
+        .add('php')
+        .add('python')
+        .add('C')
+        .add('C#')
+        .add('perl')
+        console.log(languages.size);
+        console.log(languages.entries());
+        console.log(languages.values());
+        console.log(languages.has('C')); //case sensitive
+
+        languages.delete('perl');
+        console.log(languages.values());
+        languages.clear();
+        console.log(languages.values());
+        languages
+        .add('php')
+        .add('python')
+        .add('C')
+        console.log(languages.values());
+        const values=languages.values();
+        console.log(values.next());
+
+        ///weak set
+        let languagesSet={
+            name:'php'
+        };
+        const weakLanguages=new WeakSet();
+        weakLanguages.add(languagesSet);
+        languagesSet=null;
+        console.log(weakLanguages.has(languagesSet));
+    </script>
+</body>
+</html>
